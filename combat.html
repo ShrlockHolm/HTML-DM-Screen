@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <style>
+        .tablink {
+            width: 33.33333%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="home.html">Home</a>
+        <a href="combat.html" style="color: white; font-weight: bold;">Combat</a>
+        <a href="exploring.html">Exploring</a>
+        <a href="SpecialCircumstances.html">Special Circumstances</a>
+    </div>
+
+    <div class="main">
+        <button class="tablink" onclick="openPage('OnYourTurn', this)" id="defaultOpen">On Your Turn</button>
+        <button class="tablink" onclick="openPage('Tab2', this)">Tab 2</button>
+        <button class="tablink" onclick="openPage('Tab3', this)">Tab 3</button>
+
+        <div id="OnYourTurn" class="tabcontent">
+            <div class="container">
+                <div id="DoTheFollowing" class="card">
+                    <h1>Do the following</h1>
+                    <dl>
+                        <dt>1 ACTION</dt>
+                            <dd>A list of possible actions are given in the section titled “Actions.”</dd>
+                        <dt>1 REACTION</dt>
+                            <dd>Usually spent either during a “ready action” or during an attack of opportunity.</dd>
+                        <dt>1 BONUS ACTION</dt>
+                            <dd>No generic bonus actions exist. Many race/class abilities or magic items allow for specific bonus actions.</dd>
+                        <dt>1 MOVE</dt>
+                            <dd>Move at your current speed. Take into account effects listed in the “Movement” section.</dd>
+                        <dt>FREE ACTIONS</dt>
+                            <dd>Drawing a sword, pulling out a potion, etc. don't require an action. Use any reasonable number of free actions on your turn.</dd>
+                    </dl>
+                </div>
+                <div id="Actions" class="item">
+                    <h1>Actions</h1>
+                    <table  class="listTable">
+                        <tr>
+                            <th>ATTACK</th>
+                            <td>Using attack rules</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>CAST A SPELL</th>
+                            <td>Using magic rules.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>DASH</th>
+                            <td>Move your speed as an action in addition to your normal move.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>DISENGAGE</th>
+                            <td>Disengage as your action and your movement doesn't provoke an opportunity attack.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>DODGE</th>
+                            <td>Imposes disadvantage on attackers, and gives advantage on your DEX saves.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>HELP</th>
+                            <td>Helped creature gets advantage on the attempted action. Advantage must be used before your next turn</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>HIDE</th>
+                            <td>Make a DEX (Stealth) check, opposed by passive WIS check of creature who might notice you, or active WIS check of creature actively searching for you. Attack while hiding gives advantage, but usually reveals position.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>READY</th>
+                            <td>Sacrifice current action to have an automatic reaction to a specified triggering event. Uses a reaction.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>SEARCH</th>
+                            <td>Make a WIS (Perception) check or an INT (Investigation) check.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>USE AN OBJECT</th>
+                            <td>Objects which require special interaction such as a potion.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>SHOVE</th>
+                            <td>Contest your athletics skill against another creature's athletics or acrobatics check (their choice). If you win, you can choose to move the creature 5 feet or knock it prone.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>DISARM</th>
+                            <td>Opposed STR or DEX to pull an object away from an opponent. Disadvantage if the opponent is holding the item with both hands.</td>
+                            <td>PHB XXX</td>
+                        </tr>
+                        <tr>
+                            <th>CLIMB ONTO A BIGGER CREATURE</th>
+                            <td>Contest your athletics or acrobatics (your choice) against a sufficiently larger creature's acrobatics. Larger creature's body is difficult terrain.</td>
+                            <td>DMG 271</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="Tab2" class="tabcontent">
+            <p>the basics</p>
+        </div>
+
+        <div id="Tab3" class="tabcontent">
+            <p>the basics</p>
+        </div>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+
+</body>
+
+</html>

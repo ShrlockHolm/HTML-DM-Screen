@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <style>
+        .tablink {
+            width: 33.33333%;
+        }
+        #TheCoreMechanic {
+            background-color: #b6b6b6;
+            color: #ad3f3f;
+            flex: 1 1 auto;
+        }
+        #TopMatter {
+            align-items: stretch;
+        }
+        #KeyRules {
+            flex: 2 1 auto
+        }
+        #SettingDC_container {
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="home.html" style="color: white; font-weight: bold;">Home</a>
+        <a href="combat.html">Combat</a>
+        <a href="exploring.html">Exploring</a>
+        <a href="SpecialCircumstances.html">Special Circumstances</a>
+    </div>
+
+    <div class="main">
+        <div id="TopMatter" class="container">
+            <div id="TheCoreMechanic" class="card">
+                <h1>The Core Mechanic</h1>
+                <img src="The Core Mechanic.png" alt="The Core Mechanic" style="width: 100%;">
+            </div>
+            <div id="KeyRules" class="item">
+                <h2>Key Rules</h2>
+                <dl>
+                    <dt>DIS/ADVANTAGE</dt>
+                    <dd>For advantage, roll 2d20, take the better roll. For Disadvantage, take the worse.</dd>
+                    <dt>GROUP CHECKS</dt>
+                    <dd>Everyone attempting the same action rolls. If at least half the group beats the DC, the effort succeeds.</dd>
+                    <dt>PASSIVE CHECKS</dt>
+                    <dd>10 + Modifiers + Advantage (+5) or Disadvantage (-5).</dd>
+                    <dt>CONTESTS</dt>
+                    <dd>Both parties roll as normal, but success is compared to the opposing party's roll rather than a DC. If there is a tie, the situation remains unchanged, or neither party succeeds. </dd>
+                    <dt>INSPIRATION</dt>
+                    <dd>Grants a player advantage to any one roll. The DM may award a player an inspiration bonus when they role-play their character exceptionally well. You can never have more than one Inspiration. Players can give their Inspiration to others.</dd>
+                    <dt>FRACTIONS</dt>
+                    <dd>Round all fractions down.</dd>
+                </dl>
+            </div>
+        </div>
+
+        <button class="tablink" onclick="openPage('Abilities', this)" id="defaultOpen">Abilities</button>
+        <button class="tablink" onclick="openPage('SettingDC', this)">Setting a DC</button>
+        <button class="tablink" onclick="openPage('Damage', this)">Damage</button>
+
+        <div id="Abilities" class="tabcontent">
+            <table class="listTable">
+                <tr>
+                    <th>STR</th>
+                    <td><em>Crush a tomato</em></td>
+                    <td>Athletics, Most Melee attacks </td>
+                </tr>
+                <tr>
+                    <th>DEX</th>
+                    <td><em>Dodge a tomato</em></td>
+                    <td>Acrobatics, Slight of Hand, Stealth, Most ranged attacks</td>
+                </tr>
+                <tr>
+                    <th>CON</th>
+                    <td><em>Eat a bad tomato</em></td>
+                    <td>HP, Spell concentration</td>
+                </tr>
+                <tr>
+                    <th>INT</th>
+                    <td><em>Know a tomato is a fruit</em></td>
+                    <td>Arcana, History, Investigation, Nature, Religion</td>
+                </tr>
+                <tr>
+                    <th>WIS</th>
+                    <td><em>Know to not put a tomato in a fruit salad</em></td>
+                    <td>Animal Handling, Insight, Medicine, Perception, Survival</td>
+                </tr>
+                <tr>
+                    <th>CHA</th>
+                    <td><em>Sell a tomato-based fruit salad</em></td>
+                    <td>Deception, Intimidation, Performance, Persuasion</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="SettingDC" class="tabcontent">
+            <div id="SettingDC_container" class="container">
+                <div class="item">
+                    <table class="infoTable">
+                        <tr>
+                            <td>Very Easy</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Easy</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Moderate</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Hard</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Very Hard</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Nearly Impossible</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item">
+                    <h3>Traps</h3>
+                    <table class="infoTable">
+                        <tr>
+                            <th>Trap Danger</th>
+                            <th>Save DC</th>
+                            <th>Attack Bonus</th>
+                        </tr>
+                        <tr>
+                            <td>Setback</td>
+                            <td>10-11</td>
+                            <td>+3 to +5</td>
+                        </tr>
+                        <tr>
+                            <td>Dangerous</td>
+                            <td>12-15</td>
+                            <td>+6 to +8</td>
+                        </tr>
+                        <tr>
+                            <td>Deadly</td>
+                            <td>16-20</td>
+                            <td>+9 to +12</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="Damage" class="tabcontent">
+            <div class="container">
+                <div class="item">
+                    <h3>Damage Types</h3>
+                    Acid, Bludgeoning, Cold, Fire, Force, Lightning, Necrotic, Piercing, Poison, Psychic, Radiant, Slashing, Thunder
+                </div>
+                <div class="item">
+                    <h3>Damage by Severity</h3>
+                    <table class="infoTable">
+                        <tr>
+                            <th>Character Level</th>
+                            <th>Setback</th>
+                            <th>Dangerous</th>
+                            <th>Deadly</th>
+                        </tr>
+                        <tr>
+                            <td>1-4</td>
+                            <td>1d10</td>
+                            <td>2d10</td>
+                            <td>4d10</td>
+                        </tr>
+                        <tr>
+                            <td>5-10</td>
+                            <td>2d10</td>
+                            <td>4d10</td>
+                            <td>10d10</td>
+                        </tr>
+                        <tr>
+                            <td>10-16</td>
+                            <td>4d10</td>
+                            <td>10d10</td>
+                            <td>18d10</td>
+                        </tr>
+                        <tr>
+                            <td>17-20</td>
+                            <td>10d10</td>
+                            <td>28d10</td>
+                            <td>24d10</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item">
+                    <h3>Exotic Damage</h3>
+                    <dl>
+                        <dh>EXHAUSTION</dh>
+                        <dd>Finishing a long rest reduces exhaustion level by 1 assuming the creature has had food and drink.</dd>
+                        <dh>FALLING</dh>
+                        <dd>Take 1d6 bludgeoning damage per 10 feet fallen, max 20d6. Land prone unless damage is avoided.</dd>
+                        <dh>SUFFOCATING</dh>
+                        <dd>Creature can hold breath equal to minutes = 1 + CON modifier (minimum 30 seconds). At start of next turn after this time has elapsed, drop to 0 HP and dying. </dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <h3>Levels of Exhaustion</h3>
+                    <table class="infoTable">
+                        <tr>
+                            <th>1</th>
+                            <td>Disadvantage on ability checks.</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Speed halved</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Disadvantage on attack rolls and saving throws</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>HP maximum halved</td>
+                        </tr>
+                        <tr>
+                            <th>5</th>
+                            <td>Speed reduced to 0</td>
+                        </tr>
+                        <tr>
+                            <th>6</th>
+                            <td>Death</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+
+</body>
+
+</html>
