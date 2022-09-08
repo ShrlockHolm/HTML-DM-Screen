@@ -57,7 +57,6 @@ body {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 24px;
-    /* width: 25%; */
 }
 
 .tablink:hover {
@@ -71,6 +70,7 @@ body {
     display: none;
     padding: 77px 20px 20px;
     height: 100%;
+    border: 2px solid white;
 }
 
 table.infoTable {
@@ -78,6 +78,8 @@ table.infoTable {
     border-collapse: collapse;
     width: 100%;
     color: #004469;
+    margin-right: auto;
+    margin-left: auto;
 }
 table.infoTable td,
 table.infoTable th {
@@ -134,14 +136,20 @@ h1,h2,h3 {
 .card {
     padding: 15px;
     border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5)  ; 
     margin: 10px;
     background-color: #ad3f3f;
     color: #FFFFFF;
     flex: 1 1 auto
 }
 
-.card h1 {
+.card h1,h2,h3 {
     color: #FFFFFF;
+}
+
+.card h4 {
+    color: #a9e1ff;
 }
 
 .card dt, .card dh {

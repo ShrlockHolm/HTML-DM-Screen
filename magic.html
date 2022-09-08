@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <style>
+        .tablink {
+            width: 33.33333%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="home.html">Home</a>
+        <a href="combat.html">Combat</a>
+        <!-- <a href="CombatExtras.html">Combat Extras</a> -->
+        <a href="magic.html" style="color: white; font-weight: bold;">Magic</a>
+        <a href="exploring.html">Exploring</a>
+    </div>
+
+    <div class="main">
+        <button class="tablink" onclick="openPage('Tab1', this)" id="defaultOpen">Tab 1</button>
+        <button class="tablink" onclick="openPage('Movement', this)">Tab 2</button>
+        <button class="tablink" onclick="openPage('Healing', this)">Tab 3</button>
+
+        <div id="Tab1" class="tabcontent">
+            <p>the basics</p>
+        </div>
+
+        <div id="Tab2" class="tabcontent">
+            <p>the basics</p>
+        </div>
+
+        <div id="Tab3" class="tabcontent">
+            <p>the basics</p>
+        </div>
+
+        <script>
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </div>
+
+</body>
+
+</html>
