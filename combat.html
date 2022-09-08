@@ -7,7 +7,21 @@
     <script src="scripts.js"></script>
     <style>
         .tablink {
-            width: 33.33333%;
+            width: 25%;
+        }
+        #Surprise {
+            /* flex: 1 3 20%; */
+            width: 30%;
+        }
+        #Attacks_container {
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        #Attacks_container>* {
+            flex: 1 1 0px;
+        }
+        #supcritover>* {
+            flex: 1 1 0px;
         }
     </style>
 </head>
@@ -17,19 +31,19 @@
     <div class="sidenav">
         <a href="home.html">Home</a>
         <a href="combat.html" style="color: white; font-weight: bold;">Combat</a>
+        <!-- <a href="CombatExtras.html">Combat Extras</a> -->
         <a href="exploring.html">Exploring</a>
-        <a href="SpecialCircumstances.html">Special Circumstances</a>
     </div>
 
     <div class="main">
         <button class="tablink" onclick="openPage('OnYourTurn', this)" id="defaultOpen">On Your Turn</button>
-        <button class="tablink" onclick="openPage('Tab2', this)">Tab 2</button>
-        <button class="tablink" onclick="openPage('Tab3', this)">Tab 3</button>
+        <button class="tablink" onclick="openPage('Attacks', this)">Attacks</button>
+        <button class="tablink" onclick="openPage('Healing', this)">Dying/Healing/Resting</button>
+        <button class="tablink" onclick="openPage('Movement', this)">Movement</button>
 
         <div id="OnYourTurn" class="tabcontent">
-            <div class="container">
+            <div id="OnYourTurn_container" class="container">
                 <div id="DoTheFollowing" class="card">
-                    <h1>Do the following</h1>
                     <dl>
                         <dt>1 ACTION</dt>
                             <dd>A list of possible actions are given in the section titled “Actions.”</dd>
@@ -44,7 +58,6 @@
                     </dl>
                 </div>
                 <div id="Actions" class="item">
-                    <h1>Actions</h1>
                     <table  class="listTable">
                         <tr>
                             <th>ATTACK</th>
@@ -113,15 +126,302 @@
                         </tr>
                     </table>
                 </div>
+                
             </div>
         </div>
 
-        <div id="Tab2" class="tabcontent">
-            <p>the basics</p>
+        <div id="Attacks" class="tabcontent">
+            <div id="Attacks_container" class="container">
+                <div class="card">
+                    <h1>Melee Attacks</h1>
+                    <table class="infoTable">
+                        <tr>
+                            <th>TO HIT</th>
+                            <td>d20 + STR + Weapon proficiency</td>
+                        </tr>
+                        <tr>
+                            <th>DAMAGE</th>
+                            <td>Weapon dice + STR</td>
+                        </tr>
+                    </table>
+                    <dl>
+                        <dh>REACH</dh>
+                        <dd>Unless otherwise noted, melee attacks can reach a target up to 5 feet away from the attacker.</dd>
+                        <dh>FINESSE WEAPONS</dh>
+                        <dd>Use DEX instead of STR to hit.</dd>
+                        <dh>VERSATILE WEAPONS</dh>
+                        <dd>Can be weilded either one-handed or two-handed. Use the lesser of teh damage dice for one-handed, and the greater for two-handed</dd>
+                        <dh>THROWN WEAPONS</dh>
+                        <dd>Some melee weapons can be thrown as well. When you do, use the rules of a ranged attack.</dd>
+                    </dl>
+                </div>
+                <div class="card">
+                    <h1>Ranged Attacks</h1>
+                    <table class="infoTable">
+                        <tr>
+                            <th>TO HIT</th>
+                            <td>d20 + DEX + Weapon proficiency</td>
+                        </tr>
+                        <tr>
+                            <th>DAMAGE</th>
+                            <td>Weapon dice + DEX</td>
+                        </tr>
+                    </table>
+                    <dl>
+                        <dh>RANGE - A(B)</dh>
+                        <dd>A - Normal range. If a target is within this range, roll normally</dd>
+                        <dd>B - Long range. if a target is outside the normal range but within long range, roll the attack with disadvantage.</dd>
+                        <dh>SPELLS</dh>
+                        <dd>Many spells require making a ranged attack, but do not follow the typical guidelines of physical attacks. See the section on magic for more info. TODO HYPERLINK</dd>
+                    </dl>
+                </div>
+            </div>
+            <div id="supcritover" class="container">
+                <div id="Surprise" class="item">
+                    <h1>Surprise</h1>
+                    <p>When attempting to surprise another creature perform a stealth vs. perception contest. If you win, you have surprised the other creature.</p>
+                    <p>Surprised creatures cannot act during the first round of combat.</p>
+                </div>
+                <div class="item">
+                    <h1>Criticals</h1>
+                    <dl>
+                        <dh>FUMBLE</dh>
+                        <dd>Natural 1 → Automatically misses attack</dd>
+                        <dh>CRITICAL HIT</dh>
+                        <dd>Natural 20 → Automatically hits</dd>
+                        <dd>Roll all of the attack's damage dice twice and add them together. Then add any relevant modifiers as normal. Spells with attack rolls can also have a critical hit or failure</dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <h1>Cover Rules</h1>
+                    <dl>
+                        <dh>1/2 COVER</dh>
+                        <dd>+2 AC, +2 DEX saving throws</dd>
+                        <dh>3/4 COVER</dh>
+                        <dd>+5 AC, +5 DEX saving throws</dd>
+                        <dh>FULL COVER</dh>
+                        <dd>Can't be targeted directly</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <h1>Special Attack Rules</h1>
+                    <table class="listTable">
+                        <tr>
+                            <th>OPPORTUNITY ATTACK</th>
+                            <td>Moving beyond a creature's reach provokes opportunity attack. The first creature can use a reaction to make a melee attack against the one moving away.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>RANGED ATTACKS IN MELEE</th>
+                            <td>When hostile creature is within 5 feet you get disadvantage on attack roll.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>TWO WEAPON FIGHTING</th>
+                            <td>If attacking with a light melee weapon that one hand, use a bonus action to attack with a different light melee weapon that in the other hand. Ability modifiers are not added to the damage of the bonus attack, unless that modifier is negative. If either weapon has the thrown property, it may be thrown instead of making a melee attack.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>GROUP DAMAGE ROLLS</th>
+                            <td>If spell of effect deals damage to more than one target at same time, roll damage once for all targets.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>IMPROVISED WEAPONS</th>
+                            <td>Do 1d4 damage.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>NONLETHAL DAMAGE</th>
+                            <td>PC declares they're dealing nonlethal damage. Deal damage as normal, if reduce target to 0 HP or fewer, target simply has 0 HP and falls unconscious.</td>
+                            <td>PHB xxx</td>
+                        </tr>
+                        <tr>
+                            <th>RESISTANCE/VULNERABILITY</th>
+                            <td>Damage from the specified type of damage is halved/doubled.</td>
+                            <td>
+                                PHB xxx
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
-        <div id="Tab3" class="tabcontent">
-            <p>the basics</p>
+        <div id="Healing" class="tabcontent">
+            <h1>Dying & Healing</h1>
+            <table class="listTable">
+                <tr>
+                    <th>DEATH SAVING THROWS</th>
+                    <td>Roll 1d20 with no modifiers, DC10. After three successes, the creature becomes stable. After three failures, the creature dies. Successes and failures are cumulative until stable or dead.</td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>IMMEDIATE DEATH</th>
+                    <td>If a character at 0 HP is dealt damage equal to their total HP, that character immediately dies, regardless of previous death saving throws.</td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>FIRST AID</th>
+                    <td>DC 10 Wisdom (Medicine) check to use first aid to stabilize without healer's kit.</td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>
+                        MEDICINE SKILL
+                    </th>
+                    <td>
+                        A dying creature or player can be stabilized with a DC 10 medicine check. 
+                    </td>
+                    <td>PHB 76</td>
+                </tr>
+                <tr>
+                    <th>
+                        STABILIZED
+                    </th>
+                    <td>
+                        If stabilized, creature is unconscious but no longer makes death saving throws. If not healed, will remain unconscious until regain 1 HP after 1d4 hours have passed (at which point you regain 1 HP).
+                    </td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>
+                        STABILIZING A CREATURE
+                    </th>
+                    <td>
+                        You can use your action to administer first aid to an unconscious creature and attempt to stabilize it, which requires a successful DC 10 Wisdom (Medicine) check.
+                    </td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>
+                        HEALERS KIT
+                    </th>
+                    <td>
+                        Has 10 uses. You can expend one use of the kit, as an action, to stabilize a creature that has 0 hit points without doing a Wisdom (Medicine) check.
+                    </td>
+                    <td>PHB XXX</td>
+                </tr>
+                <tr>
+                    <th>
+                        HEALING
+                    </th>
+                    <td>
+                        While HP < 0, healing frst brings HP to 0, then adds HP as normal (e.g. you're at -5 HP, cure light wounds grants 8 HP, you now have 8 HP).
+                    </td>
+                    <td>PHB XXX</td>
+                </tr>
+            </table>
+
+            <h1>Resting</h1>
+            <table class="listTable">
+                <tr>
+                    <th>
+                        SPENDING HD WHILE STABILIZED
+                    </th>
+                    <td>
+                        Not in the rules but clarified by the designers: a stabilized PC (i.e. at 0 hp) can spend HD (if he has any remaining) after a 1 hour short rest even though the PC will regain 1 HP after 1d4 hours.
+                    </td>
+                    <td>PHB XXX</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="Movement" class="tabcontent">
+            <h1>Special Movement Rules</h1>
+            <table class="listTable">
+                <tr>
+                    <th>
+                        OVERRUN or TUMBLE:
+                    </th>
+                    <td>
+                        Contest STR or DEX to move through an opponent's space.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        BREAKING UP MOVEMENT:
+                    </th>
+                    <td>
+                        During a round a character can move a distance equal to their speed, but that movement does not have to happen all at once.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        MOVING PAST FRIENDS AND FOES:
+                    </th>
+                    <td>
+                        You can move through friends freely. You can move through hostile creature's space only if the creature is at least two sizes larger or smaller than you. In such a case the creature's space treated as difficult terrain.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        DIFFICULT TERRAIN:
+                    </th>
+                    <td>
+                        Traversing difficult terrain increases movement cost by 1 foot per each foot moved. If no other movement penalties apply, this halves movement speed. If other conditions apply, the effects are cumulative.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        PRONE:
+                    </th>
+                    <td>
+                        Dropping prone is a free action. Standing from prone costs half movement speed.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        MOVEMENT WHILE PRONE:
+                    </th>
+                    <td>
+                        Crawling costs an extra feet of speed per foot moved (1 foot movement costs 2 feet). Crawling through difficult terrain costs an additional foot of speed (1 foot movement costs 3 feet).
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        SQUEEZING:
+                    </th>
+                    <td>
+                        A creature or player can move through spaces one size class lower, but may only move up to half their speed and suffer disadvantage on attack rolls and Dexterity saves. Attacks against a squeezed entity have advantage.
+                    </td>
+                    <td>
+                        PHB xxx
+                    </td>
+                </tr>
+            </table>
+            <h1>Grappling</h1>
+            <dl>
+                <dh>ACTION</dh>
+                <dd>Contest athletics against the opponent's acrobatics or athletics (opponent's choice). If you succeed your target suffers the "grappled" condition.</dd>
+                <dd>*The target must be no more than 1 size category larger than you and must be within reach.</dd>
+                <dh>CONDITION</dh>
+                <dd>Speed = 0 regardless of bonuses. Condition ends when grappler is incapacitated or when an effect removes the grappler from reach.</dd>
+                <dh>MOVING</dh>
+                <dd>You can drag or carry the grappled creature, but your speed is halved unless the creature is two or more sizes smaller than you.</dd>
+                <dh>ESCAPE</dh>
+                <dd>Make an athletics or acrobatics check contested against the grappler's athletics check to escape grapple.</dd>
+            </dl>
         </div>
 
         <script>

@@ -114,9 +114,15 @@ table.listTable th {
 
 }
 
-dt {
+dt,
+dh {
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 20px;
+    color: #005cc5;
+}
+
+h1,h2,h3 {
+    color: #ad3f3f;
 }
 
 .container {
@@ -132,6 +138,14 @@ dt {
     background-color: #ad3f3f;
     color: #FFFFFF;
     flex: 1 1 auto
+}
+
+.card h1 {
+    color: #FFFFFF;
+}
+
+.card dt, .card dh {
+    color: #a9e1ff;
 }
 
 .item {

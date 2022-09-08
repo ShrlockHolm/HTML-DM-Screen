@@ -11,7 +11,7 @@
         }
         #TheCoreMechanic {
             background-color: #b6b6b6;
-            color: #ad3f3f;
+            /* color: #ad3f3f; */
             flex: 1 1 auto;
         }
         #TopMatter {
@@ -23,6 +23,17 @@
         #SettingDC_container {
             justify-content: space-evenly;
         }
+        #Damage_container>* {
+            flex: 1 1 0px;
+        }
+        #DamageTypes {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        #DamageTypes>* {
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -31,8 +42,8 @@
     <div class="sidenav">
         <a href="home.html" style="color: white; font-weight: bold;">Home</a>
         <a href="combat.html">Combat</a>
+        <!-- <a href="CombatExtras.html">Combat Extras</a> -->
         <a href="exploring.html">Exploring</a>
-        <a href="SpecialCircumstances.html">Special Circumstances</a>
     </div>
 
     <div class="main">
@@ -158,10 +169,51 @@
         </div>
 
         <div id="Damage" class="tabcontent">
-            <div class="container">
+            <div id="Damage_container" class="container">
                 <div class="item">
                     <h3>Damage Types</h3>
-                    Acid, Bludgeoning, Cold, Fire, Force, Lightning, Necrotic, Piercing, Poison, Psychic, Radiant, Slashing, Thunder
+                    <div id="DamageTypes" class="container">
+                        <div class="item">    
+                            Acid
+                        </div>
+                        <div class="item">    
+                            Bludgeoning
+                        </div>
+                        <div class="item">    
+                            Cold
+                        </div>
+                        <div class="item">    
+                            Fire
+                        </div>
+                        <div class="item">    
+                            Force
+                        </div>
+                        <div class="item">    
+                            Lightning
+                        </div>
+                        <div class="item">    
+                            Necrotic
+                        </div>
+                        <div class="item">    
+                            Piercing
+                        </div>
+                        <div class="item">    
+                            Poison
+                        </div>
+                        <div class="item">    
+                            Psychic
+                        </div>
+                        <div class="item">    
+                            Radiant
+                        </div>
+                        <div class="item">    
+                            Slashing
+                        </div>
+                        <div class="item">    
+                            Thunder
+                        </div>
+                    </div>
+                    <!-- Acid, Bludgeoning, Cold, Fire, Force, Lightning, Necrotic, Piercing, Poison, Psychic, Radiant, Slashing, Thunder -->
                 </div>
                 <div class="item">
                     <h3>Damage by Severity</h3>
