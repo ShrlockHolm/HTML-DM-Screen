@@ -7,7 +7,7 @@
     <script src="scripts.js"></script>
     <style>
         .tablink {
-            width: 33.33333%;
+            width: 50%;
         }
     </style>
 </head>
@@ -23,19 +23,111 @@
     </div>
 
     <div class="main">
-        <button class="tablink" onclick="openPage('Tab1', this)" id="defaultOpen">Tab 1</button>
-        <button class="tablink" onclick="openPage('Movement', this)">Tab 2</button>
-        <button class="tablink" onclick="openPage('Healing', this)">Tab 3</button>
+        <button class="tablink" onclick="openPage('Magic', this)" id="defaultOpen">Magic</button>
+        <button class="tablink" onclick="openPage('SpellSlots', this)">Spell Slots</button>
 
-        <div id="Tab1" class="tabcontent">
-            <p>the basics</p>
+        <div id="Magic" class="tabcontent">
+            <div class="container">
+                <div class="card" style="background-color: #005cc5;">
+                    <table class="infoTable" style="width: 75%;">
+                        <tr>
+                            <th>SPELL ATTACK MODIFIER</th>
+                            <td>Magic Ability Modifier + Proficiency</td>
+                        </tr>
+                        <tr>
+                            <th>SPELL SAVE DC</th>
+                            <td>8 + Magic Ability modifier + Proficiency</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <h4>STACKING</h4>
+                    <p>Different spells with the same effect stack. The same spell cast multiple times takes the highest bonus.</p>
+                </div>
+                <div class="item">
+                    <h4>SPELLCASTING IN ARMOR</h4>
+                    <p>Requires proficiency in that armor. Wearing armor without proficiency prevents spellcasting.</p>
+                </div>
+                <div class="item">
+                    <h4>COPYING A SPELL INTO A SPELLBOOK</h4>
+                    <p>A wizard can add a found spell to their spellbook if it is of a level for which they have spell slots and if they can spare the time.</p>
+                </div>
+                <div class="item">
+                    <h4>SPELL SLOTS, KNOWN SPELLS, AND PREPARED SPELLS</h4>
+                    <p>Each spellcasting class has a limit to the number of spells they can cast per day. The number varies by level and class. Tables detailing the number of available spell slots can be found in the class description. Typically a spellcaster can prepare a number of spells equal to their spellcasting ability plus thier proficiency bonus</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="item">
+                    <h4>SPELL COMPONENTS</h4>
+                    <table class="listTable">
+                        <tr>
+                            <th>Verbal</th>
+                            <td>Spoken words. Hearing not necessary</td>
+                        </tr>
+                        <tr>
+                            <th>Somatic</th>
+                            <td>Gestures; uses at least one hand</td>
+                        </tr>
+                        <tr>
+                            <th>Material</th>
+                            <td>Specific physical components required</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item">
+                    <h4>AFFECTING CONCENTRATION</h4>
+                    What affects concentration?
+                    <table class="listTable">
+                        <tr>
+                            <td>Normal Movement</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>Attacking</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>Casting a spell (conc. req'd)</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>Incapacitated</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>Killed</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>Taking Damage</td>
+                            <td>Make a CON saving throw at DC 10 or half the damage received (whichever is higher). Fail → spell is interrupted.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item">
+                    <h4>SPELLCASTING ABILITY BY CLASS</h4>
+                    <table class="listTable">
+                        <tr>
+                            <th>INT</th>
+                            <td>Wizard, Eldrich Knight (Fighter), Arcane Trickster (Rogue), Artificier</td>
+                        </tr>
+                        <tr>
+                            <th>WIS</th>
+                            <td>Cleric, Druid, Ranger</td>
+                        </tr>
+                        <tr>
+                            <th>CHA</th>
+                            <td>Bard, Paladin, Sorcerer, Warlock</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
-        <div id="Tab2" class="tabcontent">
-            <p>the basics</p>
-        </div>
-
-        <div id="Tab3" class="tabcontent">
+        <div id="SpellSlots" class="tabcontent">
             <p>the basics</p>
         </div>
 

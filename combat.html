@@ -49,11 +49,11 @@
     </div>
 
     <div class="main">
-        <button class="tablink" onclick="openPage('OnYourTurn', this)">On Your Turn</button>
+        <button class="tablink" onclick="openPage('OnYourTurn', this)" id="defaultOpen">On Your Turn</button>
         <button class="tablink" onclick="openPage('Attacks', this)">Attacks</button>
         <button class="tablink" onclick="openPage('Healing', this)">Dying/Healing/Resting</button>
         <button class="tablink" onclick="openPage('Movement', this)">Movement</button>
-        <button class="tablink" onclick="openPage('Conditions', this)" id="defaultOpen">Conditions</button>
+        <button class="tablink" onclick="openPage('Conditions', this)">Conditions</button>
 
         <div id="OnYourTurn" class="tabcontent">
             <div id="OnYourTurn_container" class="container">
@@ -429,7 +429,7 @@
                 <div class="card">
                     <h4>BLINDED</h4>
                     <p>Character automatically fails any ability requiring sight. Attack rolls against this creature have advantage. This creature has disadvantage while attacking.</p>
-                    <p>PHB XXX</p>
+                    <p><a href="https://www.dndbeyond.com/sources/phb/appendix-a-conditions#Blinded">PHB XXX</a></p>
                 </div>
                 <div class="card">
                     <h4>FRIGHTENED</h4>
