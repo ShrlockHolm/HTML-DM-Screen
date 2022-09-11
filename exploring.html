@@ -23,12 +23,124 @@
     </div>
 
     <div class="main">
-        <button class="tablink" onclick="openPage('Tab1', this)" id="defaultOpen">Tab 1</button>
-        <button class="tablink" onclick="openPage('Movement', this)">Tab 2</button>
-        <button class="tablink" onclick="openPage('Healing', this)">Tab 3</button>
+        <button class="tablink" onclick="openPage('Clases', this)" id="defaultOpen">Clases</button>
+        <button class="tablink" onclick="openPage('Tab2', this)">Tab</button>
+        <button class="tablink" onclick="openPage('Tab3', this)">Tab</button>
 
-        <div id="Tab1" class="tabcontent">
-            <p>the basics</p>
+        <div id="Clases" class="tabcontent">
+            <table class="infoTable">
+                <thead>
+                    <tr style="text-align: right;">
+                        <th>Class</th>
+                        <th>Description</th>
+                        <th>Hit Die</th>
+                        <th>Primary Ability</th>
+                        <th>Saving Throw Proficiencies</th>
+                        <th>Armor and Weapon Proficiencies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Barbarian</th>
+                        <td>A fierce warrior of primitive background who can enter a battle rage</td>
+                        <td>d12</td>
+                        <td>Strength</td>
+                        <td>Strength &amp; Constitution</td>
+                        <td>Light and medium armor, shields, simple and martial weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Bard</th>
+                        <td>An inspiring magician whose power echoes the music of creation</td>
+                        <td>d8</td>
+                        <td>Charisma</td>
+                        <td>Dexterity &amp; Charisma</td>
+                        <td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>
+                    </tr>
+                    <tr>
+                        <th>Cleric</th>
+                        <td>A priestly champion who wields divine magic in service of a higher power</td>
+                        <td>d8</td>
+                        <td>Wisdom</td>
+                        <td>Wisdom &amp; Charisma</td>
+                        <td>Light and medium armor, shields, simple weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Druid</th>
+                        <td>A priest of the Old Faith, wielding the powers of nature — moonlight and plant growth, fire and
+                            lightning — and adopting animal forms</td>
+                        <td>d8</td>
+                        <td>Wisdom</td>
+                        <td>Intelligence &amp; Wisdom</td>
+                        <td>Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces,
+                            quarterstaffs, scimitars, sickles, slings, spears</td>
+                    </tr>
+                    <tr>
+                        <th>Fighter</th>
+                        <td>A master of martial combat, skilled with a variety of weapons and armor</td>
+                        <td>d10</td>
+                        <td>Strength or Dexterity</td>
+                        <td>Strength &amp; Constitution</td>
+                        <td>All armor, shields, simple and martial weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Monk</th>
+                        <td>A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual
+                            perfection</td>
+                        <td>d8</td>
+                        <td>Dexterity &amp; Wisdom</td>
+                        <td>Strength &amp; Dexterity</td>
+                        <td>Simple weapons, shortswords</td>
+                    </tr>
+                    <tr>
+                        <th>Paladin</th>
+                        <td>A holy warrior bound to a sacred oath</td>
+                        <td>d10</td>
+                        <td>Strength &amp; Charisma</td>
+                        <td>Wisdom &amp; Charisma</td>
+                        <td>All armor, shields, simple and martial weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Ranger</th>
+                        <td>A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization</td>
+                        <td>d10</td>
+                        <td>Dexterity &amp; Wisdom</td>
+                        <td>Strength &amp; Dexterity</td>
+                        <td>Light and medium armor, shields, simple and martial weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Rogue</th>
+                        <td>A scoundrel who uses stealth and trickery to overcome obstacles and enemies</td>
+                        <td>d8</td>
+                        <td>Dexterity</td>
+                        <td>Dexterity &amp; Intelligence</td>
+                        <td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>
+                    </tr>
+                    <tr>
+                        <th>Sorcerer</th>
+                        <td>A spellcaster who draws on inherent magic from a gift or bloodline</td>
+                        <td>d6</td>
+                        <td>Charisma</td>
+                        <td>Constitution &amp; Charisma</td>
+                        <td>Daggers, darts, slings, quarterstaffs, light crossbows</td>
+                    </tr>
+                    <tr>
+                        <th>Warlock</th>
+                        <td>A wielder of magic that is derived from a bargain with an extraplanar entity</td>
+                        <td>d8</td>
+                        <td>Charisma</td>
+                        <td>Wisdom &amp; Charisma</td>
+                        <td>Light armor, simple weapons</td>
+                    </tr>
+                    <tr>
+                        <th>Wizard</th>
+                        <td>A scholarly magic-user capable of manipulating the structures of reality</td>
+                        <td>d6</td>
+                        <td>Intelligence</td>
+                        <td>Intelligence &amp; Wisdom</td>
+                        <td>Daggers, darts, slings, quarterstaffs, light crossbows</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div id="Tab2" class="tabcontent">
