@@ -24,11 +24,11 @@
 
     <div class="main">
         <button class="tablink" onclick="openPage('Clases', this)" id="defaultOpen">Clases</button>
-        <button class="tablink" onclick="openPage('Tab2', this)">Tab</button>
-        <button class="tablink" onclick="openPage('Tab3', this)">Tab</button>
+        <button class="tablink" onclick="openPage('Races', this)">Races</button>
+        <button class="tablink" onclick="openPage('CustomBackgrounds', this)">Custom Backgrounds</button>
 
         <div id="Clases" class="tabcontent">
-            <table class="infoTable">
+            <table class="listTable">
                 <thead>
                     <tr style="text-align: right;">
                         <th>Class</th>
@@ -141,14 +141,191 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <h2>Key Class Abilities and their descriptions</h2>
+
+            <dl>
+                <dh>Rogue Sneak Attack</dh>
+                <dd>It increases damage done by a lot.</dd>
+                <dh>Barbarian Rage</dh>
+                <dd>I would like to RRAAAAAAGE</dd>
+            </dl>
         </div>
 
-        <div id="Tab2" class="tabcontent">
-            <p>the basics</p>
+        <div id="Races" class="tabcontent">
+            <table class="listTable">
+                <thead>
+                    <tr>
+                        <th>Race</th>
+                        <th>Description</th>
+                        <th>Racial Traits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Dragonborn</th>
+                        <td>Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail.</td>
+                        <td>+2 STR, +1 CHA, Draconic Ancestry, Breath Weapon, Damage Resistance</td>
+                    </tr>
+                    <tr>
+                        <th>Dwarf</th>
+                        <td>Bold and hardy, dwarves are known as skilled warriors, miners and workersof stone and metal.</td>
+                        <td>+2 CON, Darkvision, Dwarven Resilience, Dwarven Combat Training, Stonecutting</td>
+                    </tr>
+                    <tr>
+                        <th>Elf</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Gnome</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Half-Elf</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Halfling</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Half-Orc</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Human</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tiefling</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Aarakocra</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Genasi</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Goliath</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Aasimar</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Tabaxi</th>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Size Classes</h2>
+
+            <table class="infoTable">
+                <thead>
+                    <tr>
+                        <th>Classification</th>
+                        <th>Range (ft.)</th>
+                        <th>Examples</th>
+                    </tr>
+                    <tr>
+                        <td>Fine</td>
+                        <td>6 in. or less</td>
+                        <td>Insects</td>
+                    </tr>
+                    <tr>
+                        <td>Diminutive</td>
+                        <td>6 in. - 1 ft.</td>
+                        <td>Bats, rodents</td>
+                    </tr>
+                    <tr>
+                        <td>Tiny</td>
+                        <td>1-2</td>
+                        <td>Cat, Imp</td>
+                    </tr>
+                    <tr>
+                        <td>Small</td>
+                        <td>2-4</td>
+                        <td>Dogs, Halflings</td>
+                    </tr>
+                    <tr>
+                        <td>Medium</td>
+                        <td>4-8</td>
+                        <td>Humanoids, Dire Toad</td>
+                    </tr>
+                    <tr>
+                        <td>Large</td>
+                        <td>8-16</td>
+                        <td>Horse, Ape, Manta Ray</td>
+                    </tr>
+                    <tr>
+                        <td>Huge</td>
+                        <td>16-32</td>
+                        <td>Tyrannosaurus, Dragon Turtle</td>
+                    </tr>
+                    <tr>
+                        <td>Gargantuan</td>
+                        <td>32-64</td>
+                        <td>Megalodon, Roc</td>
+                    </tr>
+                    <tr>
+                        <td>Colossal</td>
+                        <td>64 and larger</td>
+                        <td>Tarrasque, Leviathan</td>
+                    </tr>
+                </thead>
+            </table>
         </div>
 
-        <div id="Tab3" class="tabcontent">
-            <p>the basics</p>
+        <div id="CustomBackgrounds" class="tabcontent">
+            <p>Follow these steps to make a custom background for a chacter. (DMG 289)</p>
+            <ol>
+                <li>Root it in your world<br>Make it topical</li>
+                <li>Suggest Personal Characteristics <br> Write something to go in the personality traits boxes</li>
+                <li>Assign Proficiencies or Languages <br> 2 skill proficiencies and 2 languages or tool proficiencies</li>
+                <li>Include Starting Equipment <br> Include some random crap that you get at the beginning and starting money to buy better crap</li>
+                <li>Settle on a Background Feature <br> Make a feature that will get you non-mechanical bonuses when role-playing. E.G. people at the library like you so you get in for free. (but libraries are free anyway?)</li>
+            </ol>
         </div>
 
         <script>
